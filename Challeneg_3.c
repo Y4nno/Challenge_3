@@ -24,7 +24,7 @@ int main(){
     populate(arr , size);
 
     int stop = 1;
-
+    
     do{
         int choice;
         int ocount = 0;
@@ -32,7 +32,6 @@ int main(){
         int* even;
         int* odd;
 
-        printf("\n");
         printf("\n1. Do you want to add a value in the first index?\n");
         printf("2. Do you want to add a value in the last index?\n");
         printf("3. Do you want to update the array? \n");
@@ -41,7 +40,7 @@ int main(){
         printf("6. Do you want to get the even numbers?\n");
         printf("7. Do you want to get the odd numbers?\n");
         printf("8. Exit\n");
-        printf("Choose: ");
+        printf("\nChoose: ");
         scanf("%d", &choice);
 
         switch(choice){
@@ -68,6 +67,8 @@ int main(){
                         printf("%d ", even[i]);
                     }
 
+                    printf("\n");
+
                     break;
 
             case 7: odd = segOdd(arr, size, &ocount);
@@ -77,13 +78,15 @@ int main(){
                         printf("%d ", odd[i]);
                     }
 
+                    printf("\n");
+
                     break;
 
             case 8: stop = !stop;
                     break;
 
             default: printf("Invalid Input.");
-                     continue;
+                    continue;
 
         }
     }while(stop);
@@ -117,6 +120,8 @@ int insertF(int* arr, int size){
         printf("%d ", arr[i]);
     }
 
+    printf("\n");
+
 }
 
 int insertL(int* arr, int size){
@@ -133,6 +138,8 @@ int insertL(int* arr, int size){
     for(int i = 0; i < size; i++){
         printf("%d ", arr[i]);
     }
+
+    printf("\n");
 
 }
 
@@ -154,6 +161,8 @@ int Update(int* arr, int size){
         printf("%d ", arr[i]);
     }
 
+    printf("\n");
+
 }
 
 int deleteF(int* arr, int size){
@@ -166,6 +175,8 @@ int deleteF(int* arr, int size){
         printf("%d ", arr[i]);
     }
 
+    printf("\n");
+
 }
 
 int deleteL(int* arr, int size){
@@ -177,6 +188,8 @@ int deleteL(int* arr, int size){
     for(int i = 0; i < size; i++){
         printf("%d ", arr[i]);
     }
+
+    printf("\n");
 
 }
 
